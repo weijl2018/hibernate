@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        '-//Hibernate/Hibernate Mapping DTD 3.0//EN'
+        'http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd'>
+<!-- 映射文件
+关联数据库的表和pojo -->
+<hibernate-mapping package="com.hr.domain">
+	<class table="employee" name="Employee">
+		<!-- id元素用于指定主键属性 -->
+		<id name="id" column="id" type="java.lang.Integer">
+			<!-- 该元素用于指定id生成策略 -->
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" column="name" not-null="false" type="java.lang.String">
+		</property>
+		<property name="email" column="email" type="java.lang.String" not-null="false">
+		</property>
+		<property name="hireDate" column="hireDate" type="java.util.Date">
+		</property>
+	</class>
+</hibernate-mapping>

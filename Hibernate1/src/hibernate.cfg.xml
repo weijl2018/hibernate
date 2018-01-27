@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- 用于指定连接数据库的类型，driver 用户名，密码
+ -->
+<hibernate-configuration>
+  <session-factory>
+  	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+  	<property name="connection.url">jdbc:mysql://127.0.0.1:3306/hibernate_hr</property>
+  	<property name="connection.username">root</property>
+  	<property name="connection.password">root</property>
+  	<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+  	<property name="show_sql">true</property>
+  	<property name="format_sql">true</property>
+  	<mapping resource="com/hr/domain/Employee.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
